@@ -1,6 +1,18 @@
-body {
+html, body {
 	margin: 0px;
+	height: 100%;
 	background-color: whitesmoke;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -35px;
+}
+
+#push {
+	height: 35px;
 }
 
 #top {
@@ -30,12 +42,11 @@ body {
 
 #middle {
 	margin: 20px auto;
-	min-height: 82vh;
 }
 
 #content {
 	background-color: white;
-	margin: 10px;
+	margin: 10px 0;
 	padding: 20px;
 	width: 100%;
 	float: left;
@@ -43,7 +54,7 @@ body {
 
 #aside {
 	background-color: white;
-	margin: 10px;
+	margin: 10px 0;
 	padding: 15px;
 	width: 100%;
 	float: left;
@@ -103,8 +114,16 @@ body {
 
 #content img {
 	float: left;
-	margin-right: 10px;
+	margin: 5px 10px 5px 0;
 }
+
+@media (max-width: 575px) {
+	#content img {
+		width: 100%;
+		margin: 5px 0;
+	}
+}
+
 
 .clearfix::after {
 	content: "";
@@ -118,7 +137,6 @@ body {
 }
 
 .footer {
-	bottom: 0;
 	width: 100%
 	height: 30px;
 	line-height: 30px;
